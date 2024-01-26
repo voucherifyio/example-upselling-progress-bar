@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+* [About Voucherify](#about)
+* [Voucherify Upselling Progress Bar](voucherify-upselling-progress-bar)
+* [How to run Voucherify samples locally?](#voucherify-locally)
+* [Get support](#support)
 
-## Getting Started
+# Welcome to Voucherify! <a id="about"></a>
 
-First, run the development server:
+Voucherify is an API-centric promotion engine for digital teams. It empowers marketers to quickly launch and efficiently manage promotions personalized with customer and session data, including coupons, gift cards, in-cart promotions, giveaways, referral, and loyalty programs.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Voucherify Upselling Progress Bar <a id="voucherify-upselling-progress-bar"></a>
+Voucherify Upselling Progress Bar is an example implementation of UI component for a store, showcasing promotions as part of an upselling campaign conducted using Voucherify. The component, in the form of a progress bar, displays promotions achievable for the customer based on the total value of the shopping cart. This solution can be easily adapted to other scenarios where validation rules are based on the same criteria, such as the number of ordered products.
+
+This example requires configured Voucherify promotion tiers that:
+- have the metadata 'upselling-progress-bar set to 'true',
+- have only one validation rule based on the order value and the 'more_than' condition.
+
+![Screenshot](public/screenshot.png)
+
+
+## How to run Voucherify samples locally? <a id="voucherify-locally"></a>
+
+Follow the steps below to run locally.
+
+1. Clone repository.
+
 ```
+git clone https://github.com/voucherifyio/example-upselling-progress-bar.git
+```
+2. Create your [Voucherify account](http://app.voucherify.io/#/signup) (free tier, no credit card required).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Go to the Sandbox project’s settings and get your Application ID and Secret Key, see [Authentication](https://docs.voucherify.io/docs/authentication).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Rename .env.example to .env and paste your API keys:
+```
+VOUCHERIFY_APP_ID=<replace-with-your-application-id>
+VOUCHERIFY_SECRET_KEY=<replace-with-your-secret-key>
+```
+5. Install dependencies.
+```
+npm install / yarn install
+```
+6. Start the Node server by entering one of the commands in the terminal.
+```
+npm run start / npm run dev || yarn start / yarn run dev 
+```
+7. Go to [http://localhost:3000](http://localhost:3000/) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Get support <a id="support"></a>
 
-## Learn More
+If you found a bug or want to suggest a new sample, please file an issue.
 
-To learn more about Next.js, take a look at the following resources:
+If you have questions, comments, or need help with code, we’re here to help:
+* on [Slack](https://www.voucherify.io/community)
+* by [email](https://www.voucherify.io/contact-support)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For more tutorials and full API reference, visit our [Developer Hub](https://docs.voucherify.io).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Authors
+[@patricioo1](https://github.com/patricioo1)
