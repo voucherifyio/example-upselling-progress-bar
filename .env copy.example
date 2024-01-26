@@ -1,0 +1,4 @@
+VOUCHERIFY_APP_ID = xxx
+VOUCHERIFY_SECRET_KEY = xxx
+VOUCHERIFY_API_URL = https://api.voucherify.io
+NEXT_PUBLIC_BACKEND_URL = http://localhost:3000

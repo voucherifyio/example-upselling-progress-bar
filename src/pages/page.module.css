@@ -1,7 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
@@ -9,7 +9,7 @@
 
 .description {
   display: inherit;
-  justify-content: inherit;
+  justify-content: space-between ;
   align-items: inherit;
   font-size: 0.85rem;
   max-width: var(--max-width);
@@ -75,10 +75,18 @@
 
 .center {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
-  padding: 4rem 0;
+  
+  width: 100%;
+  width: var(--max-width);
+  margin: 2rem 0 0;
+  padding: 2rem;
+  background-color: white;
+  color: black;
+  border-radius: 1rem;
 }
 
 .center::before {
@@ -103,6 +111,10 @@
   position: absolute;
   filter: blur(45px);
   transform: translateZ(0);
+}
+
+.center li {
+  margin-left: 1.5rem;
 }
 
 .logo {
